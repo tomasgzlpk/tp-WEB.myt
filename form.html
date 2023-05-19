@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- -------- -->
+
+    <title>Document</title>
+</head>
+<body class="body_form">
+    <header>
+        <nav class="encabezado">
+
+            <img src="images/logo.jfif">
+
+            <div class="div-derecha">
+                <ul class="botonera">
+                    <li><a href="#"> tren superior</a></li>
+                    <li><a href="#"> tren inferior</a></li>
+                    <li><a href="#">nutricion</a></li>
+                    <li><a href="#">hazte parte</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    
+    <div class="container_img-form">
+        <img  class="main_img-form"src="/images/1df67bae-3326-4fdf-8efa-8c33981370d9.jpg" alt="">
+    </div>
+    
+    <section class="section_form">
+        <form action=# method="post" id="form">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" placeholder="Nombre" value=""name="user_name" id="input-name" required minlength="2">
+                </li>
+                <li>
+                    <label for="mail">Correo:</label>
+                    <input placeholder="Email" type="email" name="user_email" id="input-email" required minlength="8">
+                </li>
+                <li>
+                    <label for="subject">Asunto:</label>
+                    <input type="text" placeholder="Asunto" name="user_subject" id="input-subject">
+                </li>
+                <li>
+                    <label for="msg">Mensaje:</label>
+                    <textarea name="user_message" id="input-msg" required minlength="4"></textarea >
+                </li>
+                <li class="button">
+                    <button id="button-form">Enviar</button>
+                </li>
+            </ul>
+            <div class="container-checkbox-captcha">
+                <input type="checkbox" class="input-captcha">
+                <label for="" class="label-captcha"> No soy un robot </label>
+            </div>
+            <div class="container-captcha">
+                <div class="captcha-area">
+                    <div class="captcha-img">
+                        <img src="/images/captcha-bg.png" alt="Captch Background">
+                        <span class="captcha"></span>
+                    </div>
+                </div>
+                    <input type="text" placeholder="Introducir captcha" maxlength="6" spellcheck="false" required>
+                    <button class="btn check-btn">CHECK</button>
+                    <button class="btn reload-btn">RESET</button>
+            </div>
+        </form>  
+        
+    </section>
+    <footer class="footer footer-form priColor">
+        <div class="footer_container_icon">
+            <a href="">
+                <span class="material-symbols-outlined">
+                deployed_code
+                </span>
+            </a>
+        </div>
+        <div class="footer_container_p-description">
+            <p class="footer_p-description">
+                En fit healthy, descubre laverdad de ejercioos, información nuticional y motivación para lograr tu mejor cambio físico.
+            </p>
+        </div>
+        <div>
+            <div class="footer_container_subtitle">
+                <h5 class="footer_subtitle footer_subtitle-pri">
+                    Hazte parte!
+                </h5>
+                <h6 class="footer_subtitle footer_subtitle-sec">
+                    Compartamos esta pasión y crezcamos juntos
+                </h6>
+            </div>
+
+            <ul class="footer_ul-socialMedia">
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            deployed_code
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            deployed_code
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            deployed_code
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

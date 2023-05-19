@@ -1,0 +1,627 @@
+/* 
+    1 - Posicionamiento
+    2 - Box model (Display)
+    3 - Texto
+    4 - Visuales
+    5 - resto
+
+    Sub organizar en ABCDario
+*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+/*BARRA DE NAVEGACION / HOME */
+/*(se utiliza en todos los archivos solo cambia el logo) */
+.encabezado {
+    background-color: #002629;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    object-fit: cover;
+
+}
+
+.encabezado ul {
+
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 30px;
+    align-items: center;
+}
+
+.encabezado li {
+    margin: 30px;
+
+}
+
+.encabezado a {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+}
+
+.encabezado img {
+    margin: 10px;
+    width: 7%;
+    height: 40px;
+}
+
+
+/*CONTENIDO DEL HOME*/
+
+.cont-home h2 {
+    color: #009E8D;
+    text-transform: uppercase;
+
+    text-align: center;
+    font-size: 32px;
+    padding: 50px;
+}
+
+
+.cont-home img {
+    margin: 50px;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20%;
+
+
+
+}
+
+.cont-home p {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin: 150px;
+}
+
+.cont-home h3 {
+    color: #009E8D;
+    text-transform: uppercase;
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+    /*background-color: aqua;*/
+    text-align: center;
+    padding: 20px;
+
+}
+
+/*TREN SUPERIOR*/
+/*imagen de portada, texto y contenido*/
+
+.contenedor {
+    position: relative;
+}
+
+.contenedor img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.texto {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.texto h1 {
+    font-size: 90px;
+    margin-bottom: 10px;
+    font-family: "Montserrat", Sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.texto p {
+    font-size: 80px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+:root {
+    --primary-color: hsl(214, 84%, 56%);
+    --secondary-color: hsl(180, 83%, 51%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: hsl(0, 0%, 90%);
+}
+
+.priColor {
+    background-color: var(--primary-color);
+}
+
+.secColor {
+    background-color: var(--secondary-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 25px;
+}
+
+.nav-li:first-child {
+    float: left;
+}
+
+.nav-li {
+    align-items: center;
+}
+
+.nav-li:last-child {
+    float: right;
+}
+
+.nav-li-options {
+    display: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* MAIN */
+
+.main_title {
+    color: red;
+}
+
+.main_img {
+    width: 100%;
+}
+
+/* FORM */
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    /* background-image: url(/images/mh-trainer-2-1533576998.png) */
+}
+
+form {
+    /* Centrar el formulario en la página */
+    margin: 0;
+    width: 45vw;
+    /* Esquema del formulario */
+    padding: 1em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 1em;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+    color: aliceblue;
+}
+
+form ul li {
+    list-style: none;
+}
+
+input,
+textarea {
+    /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+       Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+    font: 1em sans-serif;
+
+    /* Tamaño uniforme del campo de texto */
+    width: 85%;
+    box-sizing: border-box;
+
+    /* Hacer coincidir los bordes del campo del formulario */
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    /* Destacado adicional para elementos que tienen el cursor */
+    border-color: #000;
+}
+
+input:focus:invalid {
+    border: rgb(219, 18, 18) solid;
+}
+
+textarea {
+    /* Alinear los campos de texto multilínea con sus etiquetas */
+    vertical-align: top;
+
+    /* Proporcionar espacio para escribir texto */
+    min-height: 5em;
+    max-height: 15em;
+    min-width: 85%;
+    max-width: 85%;
+}
+
+/* CAPTCHA */
+
+.container-checkbox-captcha {
+    background-color: #ffffffa2;
+    border: #000 1px solid;
+    display: flex;
+    width: 25%;
+    height: 4em;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-captcha {
+    margin-left: 8px;
+    width: fit-content;
+    vertical-align: baseline;
+    color: #000;
+}
+
+.input-captcha {
+    width: fit-content;
+}
+
+.container-captcha {
+    margin: 25px auto 0 auto;
+    max-width: 485px;
+    width: 100%;
+    background-color: #ffffffa2;
+    padding: 22px 30px 40px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.btn {
+    margin-top: 4px;
+}
+
+/*  CAPTCHA END */
+
+
+/*IMAGEN DE HAZTE PARTE*/
+
+.section_form {
+    margin: 15px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_img-form {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.main_img-form {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    z-index: 0;
+    width: 100%;
+    height: 1000px;
+    
+}
+
+
+/* FOOTER */
+/*
+footer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 160px;
+}
+
+.footer-form{
+    position: absolute;
+    bottom:-100px;
+}
+
+.footer_container_icon{
+    height: 40%;
+    width: 50%;
+    margin: 35px 0px 0px 50px;
+}
+
+.footer_container_p-description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 30%;
+    margin: 0 0 0 25px ;
+    text-align: center;
+}
+
+.footer_p-description{
+    margin-bottom: 0;
+}
+
+.footer_container_subtitle{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    margin: 35px 25px 0 0;
+}
+
+.footer_subtitle{
+    margin: 0 0 5px 0 ;
+}
+
+.footer_subtitle-pri{
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.footer_subtitle-sec{
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.footer_ul-socialMedia{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    list-style: none;
+    margin: 15px 25px 20px 0;
+}
+
+.footer_ul-socialMedia li{
+    text-align: center;
+    display: inline-block;
+    padding: 6px;
+}
+
+.i_social{
+    width: 24px;
+    height: 24px;
+}
+*/
+/* RESPONSIVE */
+
+@media(max-width:950px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0 24px;
+        float: left;
+    }
+
+    .main_img {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 375px) {
+
+    /* ESTO HAY QUE CAMBIARLO: ESCONDER LOS LI */
+    nav ul li {
+        margin: 0 8px;
+        float: left;
+    }
+
+    .main_title {
+        position: absolute;
+        /* top: 30px; */
+        bottom: 50%;
+        left: 5%;
+    }
+
+    .nav-options {
+        display: inline-block;
+        margin: 16px;
+    }
+
+    .nav-li:nth-child(2) {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .nav-li:nth-child(3) {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .nav-li:nth-child(4) {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+/* seccion flexiones,fondos,dominadas */
+.cont-trensup h2 {
+    text-transform: uppercase;
+    font-family: Ubuntu, sans-serif;
+    color: #009E8D;
+    margin: 50px;
+    width: 400px;
+    height: 50%;
+}
+
+/* flexiones*/
+.flexiones {
+    /*background-color: #002629;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.flexiones img {
+    width: 700px;
+    height: 40%;
+    margin: 20px;
+}
+
+.text-flexiones, .fondos, .dominadas p {
+    color: #000000;
+    display: block;
+    margin: 25px;
+    font-family: National2, Helvetica, Arial, Sans-serif;
+
+}
+
+/*fondos*/
+.fondos {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.fondos img {
+    width: 700px;
+    height: 40%;
+    margin: 25px;
+}
+
+
+
+/*dominadas*/
+
+.dominadas {
+    /*background-color: #002629;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.dominadas img {
+    width: 700px;
+    height: 40%;
+    margin: 20px;
+}
+
+
+
+
+/* NUTRICION ( TABLA NUTRICIONAL ) */
+.body-nutricion {
+    background-color: #0F5A4D;
+}
+
+.tabla-nut h1 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    padding: 50px;
+}
+
+.tabla-nut p {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+}
+
+thead {
+    color: #002629;
+
+}
+
+table,
+tr,
+td {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    border: 3px solid black;
+    border-collapse: collapse;
+
+    width: 1100px;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 900px;
+}
+
+.desc-tabla p {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    display: block;
+    text-align: center;
+    padding: 20px;
+
+
+}
+
+.desc-tabla span {
+    color: #0E2723;
+    text-transform: uppercase;
+}
